@@ -103,7 +103,7 @@ function App() {
     
     try {
       const imageData = canvasRef.current.toDataURL("image/png");
-      const response = await fetch("http://localhost:5000/process-image", {
+      const response = await fetch("https://igris-backend-w2jw.onrender.com/process-image", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: imageData }),
